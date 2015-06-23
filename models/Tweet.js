@@ -29,3 +29,5 @@ TwitterSchema.statics.getTweets = function (page, skip, callback) {
       callback(tweets);
   });
 };
+
+module.exports = Tweet = mongoose.model('Tweet', TwitterSchema);

@@ -45,6 +45,7 @@ var io =  require('socket.io').listen(server);
 
 // Set twitter steaming
 twit.stream('status/filter', { track: 'chicago'}, function (stream){
+  // Stream the tweets, save them, then emit to client
   streamHandler(stream, io);
 });
 
